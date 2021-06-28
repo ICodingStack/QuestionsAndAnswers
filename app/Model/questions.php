@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class questions extends Model
@@ -21,7 +22,7 @@ class questions extends Model
       'updated_at'
     ];
     public function user(){
-        return $this->belongsTo('app/User','user_id');
+        return $this->belongsTo(User::class);
     }
     public function getCreatedDateAttributes()
     {

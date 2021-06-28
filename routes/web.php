@@ -24,3 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/Ask-new-question',function (){
     return view('web.new-question');
 })->name('new-Question');
+//display question
+Route::get('/display-question',function (){
+    return view('web.display-question');
+})->name('display-question');

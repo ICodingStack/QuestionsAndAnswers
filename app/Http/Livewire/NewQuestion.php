@@ -16,13 +16,13 @@ class NewQuestion extends Component
 
     public function updated(){
         $this->validate([
-           'title' =>'required|min:15|max:255',
+           'title' =>'required|min:15|max:191',
            'body' => 'required|min:100|max:2555'
         ]);
     }
     public function add_new_question(){
         $this->validate([
-            'title' =>'required|min:15|max:255',
+            'title' =>'required|min:15|max:191',
             'body' => 'required|min:100|max:2555'
         ]);
        $slug =str_replace(' ','-',$this->title);

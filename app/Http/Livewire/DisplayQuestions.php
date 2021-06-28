@@ -7,17 +7,17 @@ use Livewire\Component;
 
 class DisplayQuestions extends Component
 {
-    public $questions;
-    public $title ='';
-    public $body ='';
-    public $msg =false;
+    protected $questions ;
+
 
     public function mount()
     {
-        $this->questions =questions::all();
+        $this->questions =questions::latest()->paginate(6);
     }
     public function render()
     {
-        return view('livewire.display-questions');
+        return view('livewire.display-questions',[
+            'questions' =>$this->questions
+        ]);
     }
 }

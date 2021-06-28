@@ -20,3 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//new question
+Route::get('/Ask-new-question',function (){
+    return view('web.new-question');
+})->name('new-Question');

@@ -8,7 +8,7 @@
                 <div class="card-header">
                   <div class="row">
                       <div class="col-md-9">
-                          {{ __('Dashboard') }}
+                          All Questions
                       </div>
                       <div class="col-md-3">
                           <a href="{{route('new-Question')}}" class="btn btn-outline-primary">Ask a question</a>
@@ -24,7 +24,8 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    @livewire('display-questions')
+
                 </div>
             </div>
         </div>

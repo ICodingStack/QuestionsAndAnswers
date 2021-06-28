@@ -7,9 +7,12 @@ use Livewire\Component;
 
 class NewQuestion extends Component
 {
+
     public $title ='';
     public $body ='';
     public $msg =false;
+
+
 
     public function updated(){
         $this->validate([

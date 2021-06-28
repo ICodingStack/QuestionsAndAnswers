@@ -1,7 +1,7 @@
-<div class="row">
-    <div class="container">
-        <div class="col-md-7">
-            <div class="card" style="width: 60rem;">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card" >
                 <div class="card-body">
                    <div class="row">
                        <div class="col-md-7">
@@ -16,7 +16,7 @@
                             A new question has been posted successfully!
                         </div>
                     @endif
-                    <form action="#" wire:submit="add_new_question">
+                    <form action="#" wire:submit.prevent="add_new_question">
 
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Title</label>

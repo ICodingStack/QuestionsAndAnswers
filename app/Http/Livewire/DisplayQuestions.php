@@ -9,10 +9,10 @@ class DisplayQuestions extends Component
 {
     protected $questions ;
 
-
+    public $listeners =['updateParent' =>'$refresh'];
     public function mount()
     {
-        $this->questions =questions::latest()->paginate(6);
+        $this->questions =questions::latest()->paginate(2);
     }
     public function render()
     {

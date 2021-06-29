@@ -10,8 +10,10 @@ class DisplayQuestion extends Component
 {
     public $question;
 
+//    public function updateParent(){
+//        return $refresh;
+//    }
     public function mount(Request $request){
-
         $getQuestion =questions::where('slug',$request->slug)->first();
         $getQuestion->views +=1;
         $getQuestion->update();

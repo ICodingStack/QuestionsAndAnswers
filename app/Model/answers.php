@@ -5,27 +5,25 @@ namespace App\Model;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 
-class questions extends Model
+class answers extends Model
 {
-    protected $table ="questions";
+    protected $table ="answers";
     protected $primaryKey ="id";
     protected $fillable = [
-      'id',
-      'user_id',
-      'title',
-      'body',
-      'slug',
-      'views',
-      'like',
-      'dislike',
-      'created_at',
-      'updated_at'
+        'id',
+        'user_id',
+        'question_id',
+        'body',
+        'like',
+        'dislike',
+        'created_at',
+        'updated_at'
     ];
     public function user(){
         return $this->belongsTo(User::class);
     }
-    public function answers(){
-        return $this->hasMany(answers::class,'question_id');
+    public function question(){
+        return $this->belongsTo(questions::class);
     }
 
     public function getCreatedDateAttributes()
